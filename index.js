@@ -1,14 +1,15 @@
 const express = require("express")
 const app = express()
-const cors = require("cors")
+// const cors = require("cors") // FOR DEV ONLY
 require("dotenv").config()
 
-const corsOptions = {
-    origin: process.env.ORIGIN_URL,
-    optionsSuccessStatus: 200
-}
+/* FOR DEVELOPMENT ONLY */
+// const corsOptions = {
+//     origin: process.env.ORIGIN_URL,
+//     optionsSuccessStatus: 200
+// }
 
-app.use(cors(corsOptions))
+// app.use(cors(corsOptions))
 
 app.get("/", (req, res) => {
     res.send("Success!")
