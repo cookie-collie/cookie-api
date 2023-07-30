@@ -55,10 +55,11 @@ app.post("/api/request", async (req, res) => {
             } catch (e) {
                 res.status(400).json({
                     message: "Possible errors at Google Sheet API",
+                    error: e
                 })
             }
         } else {
-            res.status(400).json({ message: "Might be a robot" })
+            res.status(400).json({ message: "Might be a robot", error: e })
         }
     } catch (e) {
         res.status(500).json({ error: e, message: e.message })
