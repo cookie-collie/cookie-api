@@ -7,6 +7,7 @@ require("dotenv").config()
 
 const corsOptions = {
     origin: process.env.ORIGIN_URL,
+    credentials: true,
     optionsSuccessStatus: 200,
 }
 
