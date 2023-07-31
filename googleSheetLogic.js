@@ -9,4 +9,6 @@ const client = new google.Auth.JWT(CLIENT_EMAIL, null, PRIVATE_KEY, ["https://ww
 
 const sheet = google.google.sheets({version: "v4", auth: client})
 
+client.getAccessToken().then(res=>console.log(res))
+
 module.exports = sheet
